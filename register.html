@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourStudyMate - Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('register.jpg'); /* Replace 'your-background-image.jpg' with your actual image file path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .home-content,
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            box-sizing: border-box;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h2 class="logo">YourStudyMate</h2>
+    <div>
+        <ul>
+            <li><a href="connection.html">Connections</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="calender.html">YourCalendar</a></li>
+            <li><a href="pomo.html">Timer</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="home-content">
+    <!-- Your home page content goes here -->
+    <h1>Welcome to YourStudyMate!</h1>
+    <p>Focus on what matters,rest leave it on us</p>
+</section>
+
+<form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="yearOfStudy">Year of Study:</label>
+    <input type="text" id="yearOfStudy" name="yearOfStudy" required>
+
+    <label for="institution">Institution:</label>
+    <input type="text" id="institution" name="institution" required>
+
+    <label for="strongSubject">Your Strong Subject:</label>
+    <input type="text" id="strongSubject" name="strongSubject" required>
+
+    <label for="weakSubject">Weak Subject:</label>
+    <input type="text" id="weakSubject" name="weakSubject">
+
+    <button type="submit">Register</button>
+</form>
+
+</body>
+</html>

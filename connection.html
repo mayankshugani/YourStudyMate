@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #3a3f3f; /* Dark background */
+            color: #fff; /* White text */
+            margin: 0;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #212121; /* Darker header background */
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .search-container {
+            width: 40%;
+            background-color: #333;
+            padding: 1.5rem;
+            margin-top: 10rem;
+            margin-right: 10rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .search-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ddd;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #555;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            color: #ddd;
+            background-color: #444;
+        }
+
+        .search-btn {
+            background-color: #009688;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #00796b;
+        }
+
+        .profiles-container {
+            width: 65%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .profile {
+            flex-basis: calc(50% - 1rem);
+            border: 1px solid #333;
+            background-color: #424242; /* Grey background */
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Darker shadow */
+        }
+
+        .profile img {
+            border-radius: 50%;
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: #009688; /* Accent color for user names */
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #ddd; /* Lighter text for user expertise */
+        }
+
+        .connect-btn {
+            background-color: #009688;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .connect-btn:hover {
+            background-color: #00796b;
+        }
+    </style>
+    <title>User Connections</title>
+</head>
+<body>
+
+   
+   
+   
+
+    <div class="container">
+
+        <!-- Search Form -->
+        
+        <div class="search-container">
+            <h2>Search Users</h2>
+            <label for="qualification">Subject</label>
+            <input type="text" id="subject" name="subject">
+
+            <label for="weakSubject">Topic</label>
+            <input type="text" id="topic" name="topic">
+
+            <button class="search-btn" onclick="searchUsers()">Search</button>
+        </div>
+
+        <!-- User Profiles -->
+        <div class="profiles-container">
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 1">
+                <h2>Arjun Sharma</h2>
+                <p>Expertise: Web Development</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+            <div class="profile">
+                <img src="userpro.png" alt="User 2">
+                <h2>Aisha Patel</h2>
+                <p>Expertise: Digital Marketing</p>
+                <button class="connect-btn">Connect</button>
+            </div>
+            <!-- Add more user profiles as needed -->
+
+        </div>
+
+    </div>
+
+    <script>
+        function searchUsers() {
+            var qualification = document.getElementById('qualification').value;
+            var weakSubject = document.getElementById('weakSubject').value;
+
+            // Perform search logic based on input values
+            // You can update the user profiles based on the search criteria
+
+            // For demonstration purposes, you can just log the values
+            console.log('Qualification:', qualification);
+            console.log('Weak Subject:', weakSubject);
+        }
+    </script>
+
+</body>
+</html>

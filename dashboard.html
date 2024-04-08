@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+
+  <!-- Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      color: #fff;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #57606f;
+      background-color: #040404;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      background-color: #efefef;
+      color: #fff;
+      border: 1px solid #34495e;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #030303;
+    }
+
+    #stats {
+      margin-top: 20px;
+    }
+
+    canvas {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>User Dashboard</h1>
+  </header>
+  <section id="profile">
+    <h2>Your Profile</h2>
+    <label for="expertise">Expertise:</label>
+    <input type="text" id="expertise" placeholder="Add your expertise">
+
+    <label for="weakSubject">Weak Subject:</label>
+    <input type="text" id="weakSubject" placeholder="Add your weak subject">
+
+    <button onclick="saveProfile()">Save Profile</button>
+  </section>
+
+  <section id="stats">
+    <h2>Your Stats</h2>
+    <p>Consistency: <span id="consistency">90%</span></p>
+    <p>Growth: <span id="growth">+5%</span></p>
+
+    <!-- Chart for Growth -->
+    <canvas id="growthChart"></canvas>
+  </section>
+
+  <script>
+    function saveProfile() {
+      const expertise = document.getElementById('expertise').value;
+      const weakSubject = document.getElementById('weakSubject').value;
+
+      console.log('Expertise:', expertise);
+      console.log('Weak Subject:', weakSubject);
+
+      updateStats();
+    }
+
+    function updateStats() {
+      const consistencyValue = Math.floor(Math.random() * 20) + 80; // Simulated consistency value
+      const growthValue = Math.floor(Math.random() * 10) + 1; // Simulated growth value
+
+      document.getElementById('consistency').textContent = consistencyValue + '%';
+      document.getElementById('growth').textContent = '+' + growthValue + '%';
+
+      // Update Chart with growth data
+      updateChart(growthValue);
+    }
+
+    function updateChart(growthValue) {
+      const ctx = document.getElementById('growthChart').getContext('2d');
+      const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Growth'],
+          datasets: [{
+            label: 'Growth',
+            data: [growthValue],
+            backgroundColor: '#3498db',
+            borderColor: '#2980b9',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+        }
+      });
+    }
+
+    // Initial update of stats and chart
+    updateStats();
+  </script>
+</body>
+</html>
